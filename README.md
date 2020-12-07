@@ -1,3 +1,4 @@
+<pre>
 DTMF Deocrder/Encode on jquery
 
 sample:
@@ -52,3 +53,4 @@ $(function(){
 fork:
 RECV:https://code4sabae.github.io/dtmf/ 
 SEND:https://codepen.io/edball/pen/EVMaVN
+</pre>
