@@ -3,6 +3,9 @@ DTMC Decode & Encode with jquery
 sample-url:
 https://satorunet.github.io/dtmf/
 
+Minimam-Sample: (for newbe)
+https://satorunet.github.io/dtmf/mini-sample.html
+
 useage:
 <pre>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
