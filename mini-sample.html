@@ -1,8 +1,7 @@
 <html>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="module" src="DTMF_mod.js"></script>
-<script src="tone.js"></script>
+<script type="module" src="lib/recv/DTMF_mod.js"></script>
 
 <h1>DTMF Sample</h1>
 
@@ -46,7 +45,7 @@ $(function(){
 //Send
 $(function(){
 
-	$.getScript("tone.js?v2"+new Date().getTime()).done(function(){
+	$.getScript("lib/send/tone.js?v2"+new Date().getTime()).done(function(){
 		tones = initTones();
 
 		$(window).on("mouseup touchend", function(){
