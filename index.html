@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>DTMF2TEXT SAMPLE</title>
+<style>
+body {font-family: sans-serif ;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="module" src="lib/recv/DTMF_mod.js?"></script>
+<script src="lib/main.v1.js?v22"></script>
+<meta name="viewport" content="width=device-width,initial-scale=0.8,user-scalable=yes">
+</head>
+<body>
+<h1>DTMF2TEXT SAMPLE v4</h1>
+<style>
+.menu_selected{background:#FFFFDD}
+
+.box{text-align:center}
+
+h2{width:80%;border-left:5px solid red;text-align:left;background:#eee;display:inline-block;padding-left:10px}
+
+
+
+</style>
+<center>
+<div style="margin:10px">
+<a val=all class="menu all menu_selected" href=#>ぜんぶ</a> |
+<a val=send class="menu send" href=#>受信のみ</a> |
+<a val=recv class="menu recv" href=#>送信のみ</a>
+</div>
+</center>
+
+<div class="box box_send">
+<h2>1.送信：<byte_send /></h2>
+<center>
+<div>
+<textarea class=char cols=30 rows=5 placeholder="送りたい文字を入力"></textarea>
+<textarea readonly style="background:#eee" class=tt cols=30 rows=5 placeholder="バイナリ(4bit)：readonly"></textarea>
+<div>
+<input type=button class=playBt value="送信開始" disabled>
+<label><input type=checkbox class=is_loop>loop</label>
+</div>
+</div>
+<div style="padding:5px;display:inline-block">
+<label>遅<input type=range value=100 class=speed min=0 max=200>早</label> ：
+<speed style="display:block;;background:white"></speed>
+</div>
+</center>
+<div class=send></div>
+</div>
+
+
+<div class="box box_recv">
+<h2>2.受信：<byte_recv /></h2>
+<div style="dispay-inline-block">
+<div><info>-</info></div>
+<textarea readonly style="background:#FFF" id="result" cols=30 rows=5 placeholder="受信した文字：文字"></textarea>
+<textarea readonly style="background:#EEE" id="input" cols=30 rows=5 placeholder="受信した文字：記号"></textarea>
+<div><a href=# class=clearButton>クリア</a></div>
+</div>
+</div>
+
+<style>
+body {font-family: sans-serif ;}
+
+a[target="_blank"]:after {
+	font-family: 'Font Awesome 5 Free';
+	content: '\f35d';
+	font-size: 0.9em;
+	margin: 0px 3px;
+	font-weight: 900;
+}
+
+h1{margin-top:0px}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+<center>
+<footer style="margin-top:50px;background:#eee;padding:30px;width:80%;font-size:9pt;padding:5p">
+<div>
+powered by
+Recv:<a target=_blank href=https://github.com/code4sabae/dtmf>WebDTMF(@taisukef)</a>
+Send:<a target=_blank href=https://codepen.io/edball/pen/EVMaVN>DTMF Tones</a>
+</div>
+
+</footer>
+</center>
+</body>
+</html>
