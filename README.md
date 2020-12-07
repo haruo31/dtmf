@@ -1,11 +1,10 @@
-<pre>
-DTMF Deocrder/Encode on jquery
+DTMC Decode & Encode with jquery
 
-sample:
+sample-url:
 https://audio2text.satoru.net/dtmf/sample.html
 
-usaage:
-
+useage:
+<pre>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="module" src="DTMF_mod.js"></script>
 <script src="tone.js"></script>
@@ -49,8 +48,9 @@ $(function(){
 
 })
 </script>
+</pre>
+
 
 fork:
 RECV:https://code4sabae.github.io/dtmf/ 
 SEND:https://codepen.io/edball/pen/EVMaVN
-</pre>
