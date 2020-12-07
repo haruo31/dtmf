@@ -1,0 +1,71 @@
+<html>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="module" src="DTMF_mod.js"></script>
+<script src="tone.js"></script>
+
+<h1>DTMF Sample</h1>
+
+<dt>
+Recieve:
+<dd>
+<input type=button value="mic-start" class="mic">
+<div class=info style="display:none">
+<input placeholder="debug" class="debug">
+<input placeholder="res" class="res">
+</div>
+</dd>
+</dt>
+
+
+<dt>
+Send: 
+<dd class=send></dd>
+</dt>
+
+<script>
+
+//Recv
+$(function(){
+	$(".mic").click(function(){
+		$("body").trigger("dtmf_init");
+		$(this).prop("disabled",true);
+		$(".info").show();
+	})
+
+	$("body").bind("notice",function(e,n){
+		$(".debug").val(n);
+	});
+
+	$("body").bind("code",function(e,n){
+		$(".res").val($(".res").val() + n);
+	});
+
+})
+
+//Send
+$(function(){
+
+	$.getScript("tone.js?v2"+new Date().getTime()).done(function(){
+		tones = initTones();
+
+		$(window).on("mouseup touchend", function(){
+			tones.stopSound();
+		});
+
+		$(document).on("mousedown touchstart",".b",function(){
+			var keyPressed = $(this).text();
+			tones.startSound(keyPressed);
+		});
+	});
+
+	$("0123456789*#".split("")).each(function(i,e){
+		$(".send").append("<button class='b'>"+e+"</button>")
+	});
+
+})
+</script>
+
+
+</body>
+</html>
