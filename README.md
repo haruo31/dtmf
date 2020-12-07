@@ -10,8 +10,6 @@ useage:
 <pre>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="module" src="lib/recv/DTMF_mod.js"></script>
-<script src="lib/recv/tone.js"></script>
-
 <script>
 
 //Recv
@@ -32,7 +30,7 @@ $(function(){
 //Send
 $(function(){
 
-	$.getScript("tone.js").done(function(){
+	$.getScript("lib/send/tone.js").done(function(){
 		tones = initTones();
 
 		$(window).on("mouseup touchend", function(){
