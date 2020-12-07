@@ -51,6 +51,6 @@ $(function(){
 </pre>
 
 
-fork:
-RECV:https://code4sabae.github.io/dtmf/ 
+fork:<br>
+RECV:https://code4sabae.github.io/dtmf/<br>
 SEND:https://codepen.io/edball/pen/EVMaVN
