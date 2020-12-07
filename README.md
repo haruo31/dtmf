@@ -1,9 +1,9 @@
-DTMC Decode & Encode with jquery
+**DTMC Decode & Encode with jquery
 
-sample-url:
+useae sample:<br>
 https://satorunet.github.io/dtmf/
 
-Minimam-Sample: (for newbe)
+Minimam-Sample: (for newbe)<br>
 https://satorunet.github.io/dtmf/mini-sample.html
 
 useage:
